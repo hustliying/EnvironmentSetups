@@ -21,6 +21,7 @@ augroup end
 
 " Execute file being edited with <Shift> + e:
 map <S-e> :w<CR>:!python %:p <CR>:redr!<CR>
+" map <S-e> :w<CR>:silent !python %:p <CR>:redr!<CR>
 " map <S-e> :w<CR>:!C:\Users\liyin_000\AppData\Local\Programs\Python\Python35\python %:p <CR>:redr!<CR>
 " map <S-e> :w<CR>:py3file %:p <CR>:redr!<CR>
 " map <F5> :w<CR>:py3file %:p <CR>:redr!<CR>
@@ -79,7 +80,10 @@ if has("gui_running")
     set guifont=Inconsolata\ 12
   elseif has("gui_win32")
     "set guifont=Consolas:h14:cANSI
-    set guifont=Inziu_Iosevka_Slab_SC:h15:cGB2312
+    "set guifont=Inziu_Iosevka_SC:h15:cGB2312
+    set guifont=Inziu_IosevkaCC_SC:h15:cGB2312
+    "set guifont=Inziu_Iosevka_Slab_SC:h15:cGB2312
+    "set guifont=Inziu_IosevkaCC_Slab_SC:h15:cGB2312
   endif
 endif
 
@@ -98,7 +102,7 @@ set belloff=all
 
 " TIP
 " find files in Windows, an alternative for Ex-cmd :find
-" :r !dir /s /b /a:-d  *.java
+" :silent r!dir /s /b /a:-d  *.java
 " save file as flist or hub, mark this file with mF(filelist) or mH(hub) as a
 " working file catelog, use 'F or 'H to jump back.
 " then open with gf or <C-w>f with cursor under file name.
@@ -110,20 +114,20 @@ set belloff=all
 " o - Ex-command output by :redir @o or use window variable :redir=>w:output
 "     paste by :put=w:output or "=w:output<CR>p
 " q - repetition by qq
-" f - files, Ex-cmd for finding files in file system, eg. :r !dir /s /b /a:-d *.java
+" f - cmd for Finding Files in file system, :silent r!dir /s /b /a:-d *.java
 " b - Browser, Ex-cmd for open current file in a browser, eg. :silent !chrome %
 " r - regular expression for searching
 "
 " marks
 " F - file list file for convinient gF
-" H - working hub file, for TODOs, plan, files etc.
+" H - working Hub(or Head) file, for TODOs, plan, files etc.
 " V - ~/_gvimrc file(here) for my config and tips
 " s - start of a text block
 " e - end of a text block
+" h - head in file
 "
 
 " RE - Useful regular expressions
 " html tag: <\s\{-}\/\?.\{-}> ,use gn to select next search match
 "
 "
-
