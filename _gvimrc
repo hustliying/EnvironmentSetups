@@ -92,6 +92,9 @@ set undodir=~\vimfiles,.,c:\tmp,c:\temp
 " get .swp files to one place, or just hide them by setting the Windows Explorer
 " set directory=~\vimfiles,.,C:\Users\LIYIN_~1\AppData\Local\Temp,c:\tmp,c:\temp
 
+" turn off bells
+set belloff=all
+
 
 " TIP
 " find files in Windows, an alternative for Ex-cmd :find
@@ -123,3 +126,4 @@ set undodir=~\vimfiles,.,c:\tmp,c:\temp
 " html tag: <\s\{-}\/\?.\{-}> ,use gn to select next search match
 "
 "
+
