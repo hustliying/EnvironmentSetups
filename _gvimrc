@@ -101,6 +101,9 @@ set undodir=~\vimfiles,.,c:\tmp,c:\temp
 " turn off bells
 set belloff=all
 
+" turn on plugin indent-guides
+IndentGuidesEnable
+
 
 " TIP
 " find files in Windows, an alternative for Ex-cmd :find
@@ -124,6 +127,7 @@ set belloff=all
 " F - file list for convinient gF
 " H - working Hub(or Head) file, for TODOs, plan, files etc.
 " V - ~/_gvimrc file(here) for my config and tips
+" G - Global, actually a temp file to keep anything needed for now
 " s - start of a text block
 " e - end of a text block
 " h - head in file
