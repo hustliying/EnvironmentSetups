@@ -26,8 +26,10 @@ map <S-e> :w<CR>:!python %:p <CR>:redr!<CR>
 " map <S-e> :w<CR>:py3file %:p <CR>:redr!<CR>
 " map <F5> :w<CR>:py3file %:p <CR>:redr!<CR>
 
-" Insert a blank line above and below
-map <S-Enter> o<Esc>
+" Insert a blank line above
+map <S-Enter> O<Esc>j
+" split line after cursor
+map K mba<CR><Esc>`b
 
 " Insert a single space like in notepad, cannot be repeated using .
 map <Space> i<Space><Esc>l
@@ -119,12 +121,13 @@ set belloff=all
 " r - regular expression for searching
 "
 " marks
-" F - file list file for convinient gF
+" F - file list for convinient gF
 " H - working Hub(or Head) file, for TODOs, plan, files etc.
 " V - ~/_gvimrc file(here) for my config and tips
 " s - start of a text block
 " e - end of a text block
 " h - head in file
+" b - used to split a line after cursor
 "
 
 " RE - Useful regular expressions
