@@ -10,7 +10,6 @@ set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=chinese
 set fileencodings=ucs-bom,utf-8,chinese
-language messages zh_cn.utf-8
 
 " Basics
 set tabstop=4
@@ -87,6 +86,9 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=e
 set guioptions-=g
+set guioptions-=r
+set guioptions-=L
+set guioptions-=b
 set guioptions+=M
 
 " Plugin manager

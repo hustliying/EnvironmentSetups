@@ -22,7 +22,7 @@ if has("gui_running")
   elseif has("gui_win32")
     "set guifont=Consolas:h14:cANSI
     "set guifont=Inziu_Iosevka_SC:h15:cGB2312
-    set guifont=Inziu_IosevkaCC_SC:h15:cGB2312
+    set guifont=Inziu_IosevkaCC_SC:h16:cGB2312
     "set guifont=Inziu_Iosevka_Slab_SC:h15:cGB2312
     "set guifont=Inziu_IosevkaCC_Slab_SC:h15:cGB2312
   endif
@@ -34,7 +34,7 @@ endif
 IndentGuidesEnable
 "
 "EasyMotion
-map F <Plug>(easymotion-prefix)
+map F <Plug>(easymotion-s)
 delcommand EMCommandLineMap
 delcommand EMCommandLineUnMap
 delcommand EMCommandLineNoreMap
