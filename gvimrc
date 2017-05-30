@@ -30,34 +30,57 @@ endif
 
 
 " Plugin config
+" =============
 " turn on plugin indent-guides
 IndentGuidesEnable
 "
-"EasyMotion
+" EasyMotion
+" ignore case
+let g:EasyMotion_smartcase = 1
 map F <Plug>(easymotion-s)
+"map <C-j> <Plug>(easymotion-j)
+"map <C-k> <Plug>(easymotion-k)
 delcommand EMCommandLineMap
 delcommand EMCommandLineUnMap
 delcommand EMCommandLineNoreMap
+" Shortcut for NerdTree
+" mnemonic [e]xplorer
+map <Leader>e  :NERDTree<CR>
 
 
 
 " TIP
+" ===
+"
+" command :silent r!dir /s /b /a:-d  *.java
 " find files in Windows, an alternative for Ex-cmd :find
-" :silent r!dir /s /b /a:-d  *.java
-" save file as flist or hub, mark this file with mF(filelist) or mH(hub) as a
+" save them as flist or hub, mark this file with mF(filelist) or mH(hub) as a
 " working file catelog, use 'F or 'H to jump back.
 " then open with gf or <C-w>f with cursor under file name.
 "
+" Get command output
+" :redir=>b:output | <some command> | redir end | put=b:output
+"
+" Using Windows findstr as external grep
+" :grep equals :!findstr /n , but with quickfix list set
+" findstr /n /s(all subdirs) /r(re) <re> <filename pattern>
+"
+
 
 " MNEMONICS
+" =========
+"
 " registers
 " a - Active now
-" o - Ex-command output by :redir @o or use window variable :redir=>w:output
-"     paste by :put=w:output or "=w:output<CR>p
-" q - repetition by qq
-" f - cmd for Finding Files in file system, :silent r!dir /s /b /a:-d *.java
-" b - Browser, Ex-cmd for open current file in a browser, eg. :silent !chrome %
-" r - regular expression for searching
+" r - store a regular expression for searching
+"
+" the following regs store commands
+" q - repetition by [q]q
+" f - cmd for [F]inding [F]iles in file system
+"     :silent r!dir /s /b /a:-d *.py | findstr re
+" b - [B]rowser, Ex-cmd for open current file in a browser, eg. :silent !chrome %
+" n - adjust window to [N]avigation size, :vertical resize 36
+"
 "
 " marks
 " F - file list for convinient gF
@@ -65,6 +88,7 @@ delcommand EMCommandLineNoreMap
 " V - ~/_gvimrc file(here) for my config and tips
 " C - ~/_vimrc file for my config and tips
 " G - Global, actually a temp file to keep anything needed for now
+" L - Last editing file marked
 " s - start of a text block
 " e - end of a text block
 " h - head in file

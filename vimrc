@@ -46,9 +46,16 @@ map <Space> i<Space><Esc>l
 " Speed up scrolling
 noremap <C-j> 6j
 noremap <C-k> 6k
+" fast scrolling with one hand
+noremap <A-j> <C-d>
+noremap <A-k> <C-u>
 " Experimental, always focus at the center
 " noremap j jzz
 " noremap k kzz
+"
+" mark current file with L, then ZZ
+nnoremap ZZ mLZZ
+
 
 " Colors
 set background=dark
