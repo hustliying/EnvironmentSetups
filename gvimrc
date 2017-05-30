@@ -10,9 +10,6 @@ set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=chinese
 set fileencodings=ucs-bom,utf-8,chinese
-set langmenu=zh_CN.utf-8
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
 language messages zh_cn.utf-8
 
 augroup filetype
@@ -41,6 +38,9 @@ map <Space> i<Space><Esc>l
 " Speed up scrolling
 noremap <C-j> 6j
 noremap <C-k> 6k
+" Experimental, always focus at the center
+" noremap j jzz
+" noremap k kzz
 
 " Position from the top or bottom of the screen to start scrolling
 " from defaults.vim
@@ -93,10 +93,10 @@ endif
 set autochdir
 
 " get all *~ files to one place
-set bdir=~\vimfiles,.,c:\tmp,c:\temp
-set undodir=~\vimfiles,.,c:\tmp,c:\temp
+set bdir=~\vimfiles\zzmiscs,.,c:\tmp,c:\temp
+set undodir=~\vimfiles\zzmiscs,.,c:\tmp,c:\temp
 " get .swp files to one place, or just hide them by setting the Windows Explorer
-" set directory=~\vimfiles,.,C:\Users\LIYIN_~1\AppData\Local\Temp,c:\tmp,c:\temp
+" set directory=~\vimfiles\zzmiscs,.,C:\Users\LIYIN_~1\AppData\Local\Temp,c:\tmp,c:\temp
 
 " turn off bells
 set belloff=all
@@ -104,6 +104,11 @@ set belloff=all
 " turn on plugin indent-guides
 IndentGuidesEnable
 
+"EasyMotion
+map F <Plug>(easymotion-prefix)
+delcommand EMCommandLineMap
+delcommand EMCommandLineUnMap
+delcommand EMCommandLineNoreMap
 
 " TIP
 " find files in Windows, an alternative for Ex-cmd :find
@@ -127,6 +132,7 @@ IndentGuidesEnable
 " F - file list for convinient gF
 " H - working Hub(or Head) file, for TODOs, plan, files etc.
 " V - ~/_gvimrc file(here) for my config and tips
+" C - ~/_vimrc file for my config and tips
 " G - Global, actually a temp file to keep anything needed for now
 " s - start of a text block
 " e - end of a text block
