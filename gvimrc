@@ -16,6 +16,7 @@ else
 endif
 
 " Font in GUI Window
+" ==================
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
@@ -28,25 +29,15 @@ if has("gui_running")
   endif
 endif
 
-
-" Plugin config
-" =============
-" turn on plugin indent-guides
-IndentGuidesEnable
-"
-" EasyMotion
-" ignore case
-let g:EasyMotion_smartcase = 1
-map F <Plug>(easymotion-s)
-"map <C-j> <Plug>(easymotion-j)
-"map <C-k> <Plug>(easymotion-k)
-delcommand EMCommandLineMap
-delcommand EMCommandLineUnMap
-delcommand EMCommandLineNoreMap
-" Shortcut for NerdTree
-" mnemonic [e]xplorer
-map <Leader>e  :NERDTree<CR>
-
+" GUI color scheme
+" ================
+set background=dark
+" These are my favourites
+"colorscheme solarized
+colorscheme gruvbox
+" These are most recommended
+"colorscheme molokai
+"colorscheme desert
 
 
 " TIP
@@ -99,3 +90,15 @@ map <Leader>e  :NERDTree<CR>
 " html tag: <\s\{-}\/\?.\{-}> ,use gn to select next search match
 "
 "
+
+" Keys that could be mapped
+" The following keys are not used often, and don't cause much annoyance when
+" misused out of custom mapping habits
+" , - repeat last in-line finding(reverse), many people use it as mapleader.
+"     May be the only key with one stroke for mapping. Most convinient.
+"     Now used for EasyMotion-s
+" <Space> - like the l movement, could be used as mapleader
+" E -
+" D - same as d$
+" U - undo a line 
+" 
