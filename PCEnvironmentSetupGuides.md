@@ -25,7 +25,7 @@
 使用了[「Inziu IosevkaCC SC」](https://be5invis.github.io/Iosevka/inziu.html)字体，对于编程和中英文混合文本都支持得很好。
 
 ### Vim编辑器
-使用目前[最新版](http://www.vim.org/download.php),具体使用[「GVim8.0 64位免安装版」](https://github.com/vim/vim-win32-installer)
+使用目前[最新版](http://www.vim.org/download.php)，具体使用[「GVim8.0 64位免安装版」](https://github.com/vim/vim-win32-installer)
 配置文件和色彩文件在OneDrive和GitHub上都有。
 
 ### 搜索
@@ -33,3 +33,8 @@
 安装使用[Everything](http://www.voidtools.com/downloads/), 快捷键设置「Alt + Q」来打开搜索界面。
 #### 搜索引擎
 如果平均每天使用搜索引擎超过10次，想办法使用Google。搜索结果差距太大，长期会有很大的影响。
+
+### 浏览器
+使用Chrome浏览器，主要在于插件丰富，可以方便地增加功能
+#### Markup文件支持
+安装插件[「Markdown Viewer」](https://github.com/simov/markdown-viewer)，注意设置允许其访问文件类型的资源。
